@@ -1,0 +1,251 @@
+
+You sent
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>💌 Happy Birthday!</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond&display=swap');
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom right, #ffeef4, #ffdce2);
+      font-family: 'Cormorant Garamond', serif;
+      overflow: hidden;
+      touch-action: manipulation;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      position: relative;
+    }
+
+    .envelope {
+      width: 320px;
+      height: 200px;
+      background: #ffc0cb;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      position: relative;
+      cursor: pointer;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.4s ease;
+    }
+
+    .envelope.opened {
+      transform: scale(0.95);
+      opacity: 0.6;
+    }
+
+    .heart {
+      width: 30px;
+      height: 30px;
+      background: #ff4e7a;
+      transform: rotate(45deg);
+      position: relative;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: #ff4e7a;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -15px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -15px;
+      top: 0;
+    }
+
+    .label {
+      position: absolute;
+      bottom: 10px;
+      width: 100%;
+      text-align: center;
+      font-style: italic;
+      font-size: 16px;
+      color: #b2405a;
+    }
+
+    .paper {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -20%) scaleY(0);
+      transform-origin: top center;
+      width: 80%;
+      max-width: 600px;
+      height: 70%;
+      background: #fff url('https://www.transparenttextures.com/patterns/paper-fibers.png');
+      padding: 30px;
+      border-radius: 12px;
+      box-sizing: border-box;
+      box-shadow: inset 0 0 10px rgba(255,192,203,0.6), 0 0 15px rgba(0,0,0,0.1);
+      z-index: 5;
+      overflow-y: auto;
+      display: none;
+    }
+
+    .paper.show {
+      display: block;
+      animation: slideFromEnvelope 0.6s ease forwards;
+    }
+
+    @keyframes slideFromEnvelope {
+      0% {
+        transform: translate(-50%, -20%) scaleY(0);
+        opacity: 0;
+      }
+      100% {
+        transform: translate(-50%, -50%) scaleY(1);
+        opacity: 1;
+      }
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: hotpink;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      padding: 5px 15px;
+      cursor: pointer;
+      font-size: 14px;
+      z-index: 6;
+    }
+
+    .signature {
+      text-align: right;
+      margin-top: 40px;
+      font-style: italic;
+    }
+
+    .heart-float {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: #ff7eb9;
+      transform: rotate(-45deg);
+      animation: floatUp 6s linear infinite;
+      opacity: 0.9;
+      z-index: 1;
+    }
+
+    .heart-float::before,
+    .heart-float::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background: #ff7eb9;
+      border-radius: 50%;
+    }
+
+    .heart-float::before {
+      top: -15px;
+      left: 0;
+    }
+
+    .heart-float::after {
+      left: 15px;
+      top: 0;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) scale(1); opacity: 0.9; }
+      100% { transform: translateY(-800px) scale(1.5); opacity: 0; }
+    }
+
+    #message {
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+
+<audio autoplay loop>
+  <source src="nothing.mp3" type="audio/mpeg">
+</audio>
+
+<div class="container">
+  <div class="envelope" id="envelope">
+    <div class="heart" id="heart"></div>
+    <div class="label">Tap to open 💌</div>
+  </div>
+
+  <div class="paper" id="paper">
+    <button class="close-btn" onclick="closeLetter()">Close</button>
+    <div id="message">
+Happy Birthday, pretty babyyy! It’s 12am na omg omg I don’t really do long messages talaga so I’m sorry if hindi sweet huhu
+
+I know we’re still getting to know each other, but honestly, I’m really enjoying every moment of this and I’m excited to see where this goes. Thank you for giving me the chance to get to know you and like you, and thanks sa pag crush back HAHHAHAHHAHAHAHAHHAHHAHA Honestly, I didn’t expect things between us to grow like this.
+
+At first, I really thought happy crush lang, kasi I didn’t expect na mapapansin mo ko. But then, the more we talked, the more it started to feel real. It’s starting to get serious in the best way possible. I’m really looking forward to more moments with you, more late night convos and calls, more laughter, just more us, slowly but surely.
+
+I just want you to know na I’m here for you, always. Whether you’re having a good day or a tough one, quiet or masungit, full of stories, or just not in the mood, I’ll still choose to stay. Every time.
+
+You know ba, I really love hearing your stories. Every time you share something with me, it feels like I get to know you a little better, and like I love chismis soooooo yes HAHAHHAHAHAHAHAHAH I may not be perfect, pero I’ll do my best to be someone you can count on. Someone who stays, someone who listens, and someone who sees you for who you really are.
+
+Thank you for being patient with me kahit palagi kita inaaway and palagi ako nag tatampo. I’ll keep doing my best to be better for you because you’re worth it. Thank you for slowly becoming such an important part of my life, baby. What we have may still be growing, pero it already means so much to me.
+
+I really hope today fills your heart with so much joy, not just because it’s your birthday, but because u truly deserve to feel loved, seen, and appreciated in every way. Enjoy your day and sana wag ka muna mainis today HAHAHHAHAHAHAHHA Wishing you all the happiness today and always. Happy 15th birthday, babyyyy!
+
+“No matter what happens, I’ll stay. I’ll choose you, always.”
+“For wherever you go, I will go, and wherever you stay, I will stay.” — Ruth 1:16
+
+<div class="signature">Love, your sleepy baby 😛</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const paper = document.getElementById('paper');
+  const envelope = document.getElementById('envelope');
+
+  envelope.addEventListener('click', () => {
+    envelope.classList.add('opened');
+    paper.classList.add('show');
+  });
+
+  function closeLetter() {
+    paper.classList.remove('show');
+    envelope.classList.remove('opened');
+  }
+
+  function spawnFloatingHearts() {
+    setInterval(() => {
+      const h = document.createElement('div');
+      h.className = 'heart-float';
+      h.style.left = Math.random() * window.innerWidth + 'px';
+      h.style.animationDuration = (4 + Math.random() * 4) + 's';
+      document.body.appendChild(h);
+      setTimeout(() => h.remove(), 8000);
+    }, 500);
+  }
+
+  spawnFloatingHearts();
+</script>
+
+</body>
+</html>
